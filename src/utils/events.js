@@ -73,9 +73,9 @@ export const getOverLappingEvents = (payload) => {
 export const getEvents = (payload, width, height) => {
   const events = getOverLappingEvents(payload);
   const boxWidth = Math.floor(width / events[0].length);
-  for (var i = 0; i < events.length; i++) {
-    var currentRow = events[i];
-    for (var j = 0; j < currentRow.length; j++) {
+  for (let i = 0; i < events.length; i++) {
+    let currentRow = events[i];
+    for (let j = 0; j < currentRow.length; j++) {
       const currentPayload = payload.find((item) => {
         return item.id === currentRow[j];
       });
